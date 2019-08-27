@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: ../install/docker/Dockerfile
+    image: mellon-app
+    depends_on:
+      - db
+    networks:
+      - backend
+    ports:
+      - 5000:5000
+    env_file: ../../src/.env
+    command: ["pipenv", "run", "./run.py", "--debug"]
+  db:
+    image: mongo:4
+    networks:
+      - backend
+
+networks:
+  backend: {}
