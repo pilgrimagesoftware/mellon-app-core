@@ -1,0 +1,12 @@
+mellon-common
+mellon-core-module
+mellon-slack-module
+flask
+requests
+jsonpath-rw
+sentry-sdk[flask]
+python-dotenv
+pymongo
+wheel
+click
+prometheus-flask-exporter

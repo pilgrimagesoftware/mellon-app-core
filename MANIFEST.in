@@ -1,0 +1,3 @@
+graft mellon_app/static
+graft mellon_app/templates
+global-exclude *.pyc
