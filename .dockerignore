@@ -1,0 +1,12 @@
+.env
+.git/
+.gitignore
+README.md
+setup.cfg
+setup.py
+*.pyc
+MANIFEST.in
+scripts/
+*.egg-info/
+install/
+venv/

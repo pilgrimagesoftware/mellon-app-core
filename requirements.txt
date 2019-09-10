@@ -1,6 +1,4 @@
-mellon-common
-mellon-core-module
-mellon-slack-module
+git+https://github.com/sweetrpg/mellon-common.git@develop
 flask
 requests
 jsonpath-rw

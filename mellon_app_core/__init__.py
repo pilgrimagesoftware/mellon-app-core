@@ -15,7 +15,7 @@ from prometheus_flask_exporter import PrometheusMetrics
 sentry_sdk.init(os.environ[constants.SENTRY_DSN_ENV], integrations=[FlaskIntegration()])
 
 
-def create_app():
+def create_app(blueprint_modules: list):
     # Define the WSGI application object
     app = Flask(__name__)
 
@@ -45,16 +45,17 @@ def create_app():
     # g["metrics"] = metrics
 
     # Import a module / component using its blueprint handler variable
-    import mellon_core_module
-    import mellon_slack_module
+    # import mellon_core_module
+    # import mellon_slack_module
 
     # import mellon_discord_module
 
     # Register blueprint(s)
     app.logger.info("Registering application module blueprints...")
-    app.register_blueprint(mellon_core_module.blueprint)
+    for bp in blueprint_modules:
+        app.register_blueprint(bp)
     # app.register_blueprint(discord_module)
-    app.register_blueprint(mellon_slack_module.blueprint)
+    # app.register_blueprint(mellon_slack_module.blueprint)
 
     # from app.core import setup
 
