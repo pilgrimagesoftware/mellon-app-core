@@ -9,8 +9,6 @@ setup(
     install_requires=[
         "flask",
         "mellon-common",
-        "mellon-core-module",
-        "mellon-slack-module",
         "requests",
         "jsonpath-rw",
         "sentry-sdk",
