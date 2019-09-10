@@ -1,2 +1,3 @@
-# kanka-bot
-Bot that connects Slack/Discord to Kanka
+# mellon-app-core
+
+Base app framework for Mellon microservices.
