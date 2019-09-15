@@ -14,5 +14,4 @@ setup(
         "sentry-sdk",
         "python-dotenv",
         "pymongo",
-    ],
-)
+    ])
