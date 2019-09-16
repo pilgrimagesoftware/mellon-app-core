@@ -14,4 +14,5 @@ setup(
         "sentry-sdk",
         "python-dotenv",
         "pymongo",
+        "prometheus-flask-exporter"
     ])

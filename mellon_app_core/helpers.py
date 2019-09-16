@@ -19,10 +19,10 @@ def setup_app(app, env_path: str, blueprint_modules: list):
 
     # Configurations
     # app.config.from_object("config")
-    print(f"env_path={env_path}")
+    # print(f"env_path={env_path}")
     dotenv.load_dotenv(env_path)
     # TODO: configure from .env
-    print(f"env={os.environ}")
+    # print(f"env={os.environ}")
 
     # logging.basicConfig(level=(logging.INFO if not app.debug else logging.DEBUG))
 
