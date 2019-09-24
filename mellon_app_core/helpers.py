@@ -13,6 +13,7 @@ def setup_app(app, env_path: str, blueprint_modules: list):
     app.logger.debug(f"env_path={env_path}; blueprint_modules={blueprint_modules}")
 
     # Sentry
+    app.logger.debug(f"environment={os.environ}")
     sentry_dsn = os.environ[constants.SENTRY_DSN_ENV]
     app.logger.debug(f"sentry_dsn={sentry_dsn}")
     sentry_sdk.init(sentry_dsn, integrations=[FlaskIntegration()])
