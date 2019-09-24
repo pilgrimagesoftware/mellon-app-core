@@ -28,7 +28,7 @@ def setup_app(app, env_path: str, blueprint_modules: list):
     # logging.basicConfig(level=(logging.INFO if not app.debug else logging.DEBUG))
 
     # Sentry
-    sentry_sdk.init(os.environ[constants.SENTRY_DSN_ENV], integrations=[FlaskIntegration()])
+    # sentry_sdk.init(os.environ[constants.SENTRY_DSN_ENV], integrations=[FlaskIntegration()])
 
     # Define the database object which is imported
     # by modules and controllers
