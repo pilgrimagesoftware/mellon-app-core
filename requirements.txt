@@ -8,3 +8,4 @@ pymongo
 wheel
 click
 prometheus-flask-exporter
+blinker
