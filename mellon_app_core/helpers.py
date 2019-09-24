@@ -10,6 +10,7 @@ from mellon_common import constants, exceptions
 
 
 def setup_app(app, env_path: str, blueprint_modules: list):
+    app.logger.debug(f"env_path={env_path}; blueprint_modules={blueprint_modules}")
 
     # Sentry
     sentry_sdk.init(os.environ[constants.SENTRY_DSN_ENV], integrations=[FlaskIntegration()])
